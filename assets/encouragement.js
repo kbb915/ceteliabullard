@@ -77,10 +77,10 @@
 
   function pageIntroduction(copy) {
     return '<header class="page-introduction">' +
+      (copy.imageSrc ? '<figure class="page-image-wrap"><img class="page-image" src="' + escapeHtml(copy.imageSrc) + '" alt="' + escapeHtml(copy.imageAlt) + '"></figure>' : '') +
       '<p class="page-kicker">' + escapeHtml(copy.kicker) + '</p>' +
       '<h1>' + escapeHtml(copy.title) + '</h1>' +
       '<p class="intro-copy">' + escapeHtml(copy.introduction) + '</p>' +
-      (copy.imageSrc ? '<figure class="page-image-wrap"><img class="page-image" src="' + escapeHtml(copy.imageSrc) + '" alt="' + escapeHtml(copy.imageAlt) + '"></figure>' : '') +
       '</header>';
   }
 

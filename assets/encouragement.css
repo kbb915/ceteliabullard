@@ -103,16 +103,17 @@ h1 {
 }
 
 .page-image-wrap {
-  margin: 2rem 0 0;
+  width: clamp(180px, 42vw, 300px);
+  margin: 0 0 1.75rem;
 }
 
 .page-image {
   width: 100%;
-  max-height: 440px;
+  aspect-ratio: 16 / 10;
   display: block;
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 14px 34px rgba(38,48,39,.08);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(38,48,39,.07);
 }
 
 .controls {
