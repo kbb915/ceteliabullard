@@ -9,7 +9,7 @@
   var pageCopy = {
     truth: {
       kicker: "What I see in you",
-      title: "What Is True About Cetelia",
+      title: "What's True About Cetelia",
       introduction: "A growing collection of reminders about who you are, what is true about you, and what I see in you.",
       emptyTitle: "No truths have been added yet.",
       emptyText: "New reminders will appear here when they are ready."
