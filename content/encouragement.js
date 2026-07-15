@@ -35,15 +35,13 @@ window.ENCOURAGEMENT_CONTENT = {
   },
 
   entries: [
-    // SAMPLE TRUTH ENTRIES — delete or replace these when ready.
+    // TRUTH ENTRIES — entries with sample- IDs are samples.
     {
-      id: "sample-truth-1",
+      id: "truth-2026-07-15-not-abandoned",
       type: "truth",
-      statement: "You are deeply loved.",
+      statement: "I am not abandoned. The Father is With me.",
       date: "2026-07-15",
-      category: "Identity",
-      scriptureReference: "Ephesians 3:18–19",
-      note: "Your life is held by a love that is deeper, wider, and more enduring than circumstances.",
+      scriptureReference: "John 16:32, MSG",
       isPublished: true
     },
     {
