@@ -16,6 +16,9 @@
     p { margin:2rem 0 0; max-width:36rem; font:400 clamp(1.05rem,2.2vw,1.3rem)/1.65 system-ui,sans-serif; }
     .rule { width:4rem; height:4px; margin-top:2.25rem; border-radius:99px; background:var(--sage); }
     .portrait { width:100%; aspect-ratio:1; display:block; object-fit:cover; border-radius:22px; box-shadow:0 18px 45px rgba(23,33,27,.18); }
+    .encouragement-nav { grid-column:1/-1; display:flex; flex-wrap:wrap; gap:1rem; padding-top:1.25rem; border-top:1px solid rgba(23,33,27,.14); font:700 .8rem/1.4 system-ui,sans-serif; }
+    .encouragement-nav[hidden] { display:none; }
+    .encouragement-nav a { color:#526756; }
     @media (max-width:720px) {
       main { grid-template-columns:1fr; }
       .portrait { grid-row:1; }
@@ -31,6 +34,16 @@
       <p>A new website is being created. Please check back soon.</p>
     </div>
     <img class="portrait" src="assets/cetelia-bullard.jpg" alt="Cetelia Bullard smiling in a kitchen">
+    <nav class="encouragement-nav" id="encouragement-nav" aria-label="Personal collections" hidden>
+      <a href="/truth/">What Is True</a>
+      <a href="/thanks/">What I Am Grateful For</a>
+    </nav>
   </main>
+  <script src="/content/encouragement.js"></script>
+  <script>
+    if (window.ENCOURAGEMENT_CONTENT.config.showInPublicNavigation) {
+      document.getElementById("encouragement-nav").hidden = false;
+    }
+  </script>
 </body>
 </html>
