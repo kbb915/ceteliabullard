@@ -41,6 +41,7 @@ window.ENCOURAGEMENT_CONTENT = {
       type: "truth",
       statement: "I am not abandoned. The Father is With me.",
       date: "2026-07-15",
+      category: "Belonging",
       scriptureReference: "John 16:32, MSG",
       isPublished: true
     },
