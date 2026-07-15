@@ -94,12 +94,25 @@ h1 {
   line-height: .98;
 }
 
-.page-introduction p:last-child {
+.page-introduction .intro-copy {
   max-width: 620px;
   margin: 1.25rem 0 0;
   color: var(--muted);
   font-size: clamp(1.05rem, 3.8vw, 1.25rem);
   line-height: 1.65;
+}
+
+.page-image-wrap {
+  margin: 2rem 0 0;
+}
+
+.page-image {
+  width: 100%;
+  max-height: 440px;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(38,48,39,.08);
 }
 
 .controls {
@@ -197,6 +210,17 @@ h1 {
   color: var(--accent);
   font-size: .9rem;
   font-weight: 700;
+}
+
+.entry-scripture a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+
+.entry-scripture a:hover,
+.entry-scripture a:focus-visible {
+  color: var(--ink);
 }
 
 .entry-note {

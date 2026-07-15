@@ -11,6 +11,8 @@
       kicker: "What I see in you",
       title: "What's True About Cetelia",
       introduction: "A growing collection of reminders about who you are, what is true about you, and what I see in you.",
+      imageSrc: "/assets/truth-peonies.jpg",
+      imageAlt: "Pink peonies blooming in a garden",
       emptyTitle: "No truths have been added yet.",
       emptyText: "New reminders will appear here when they are ready."
     },
@@ -18,6 +20,8 @@
       kicker: "With gratitude",
       title: "What I Am Grateful For",
       introduction: "A growing collection of things I notice, appreciate, and never want to take for granted.",
+      imageSrc: "/assets/thanks-peonies.jpg",
+      imageAlt: "Deep red peonies arranged in a vase",
       emptyTitle: "No gratitude entries have been added yet.",
       emptyText: "New reflections will appear here when they are ready."
     }
@@ -75,8 +79,17 @@
     return '<header class="page-introduction">' +
       '<p class="page-kicker">' + escapeHtml(copy.kicker) + '</p>' +
       '<h1>' + escapeHtml(copy.title) + '</h1>' +
-      '<p>' + escapeHtml(copy.introduction) + '</p>' +
+      '<p class="intro-copy">' + escapeHtml(copy.introduction) + '</p>' +
+      (copy.imageSrc ? '<figure class="page-image-wrap"><img class="page-image" src="' + escapeHtml(copy.imageSrc) + '" alt="' + escapeHtml(copy.imageAlt) + '"></figure>' : '') +
       '</header>';
+  }
+
+  function bibleGatewayUrl(reference) {
+    var parts = String(reference).split(",");
+    var passage = parts.shift().trim();
+    var version = parts.join(",").trim();
+    return "https://www.biblegateway.com/passage/?search=" + encodeURIComponent(passage) +
+      (version ? "&version=" + encodeURIComponent(version) : "");
   }
 
   function searchField() {
@@ -105,12 +118,15 @@
   function entryCard(entry) {
     var meta = ['<span>' + escapeHtml(formatDate(entry.date)) + '</span>'];
     if (entry.category) meta.push('<span>Category: ' + escapeHtml(entry.category) + '</span>');
+    var scriptureLink = entry.scriptureReference
+      ? '<p class="entry-scripture">Scripture: <a href="' + escapeHtml(bibleGatewayUrl(entry.scriptureReference)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(entry.scriptureReference) + '</a></p>'
+      : '';
 
     return '<article class="entry-card">' +
       (entry.id.indexOf("sample-") === 0 ? '<span class="sample-label">Sample entry</span>' : '') +
       '<h2 class="entry-statement">' + escapeHtml(entry.statement) + '</h2>' +
       '<div class="entry-meta">' + meta.join("") + '</div>' +
-      (entry.scriptureReference ? '<p class="entry-scripture">Scripture: ' + escapeHtml(entry.scriptureReference) + '</p>' : '') +
+      scriptureLink +
       (entry.note ? '<p class="entry-note">' + escapeHtml(entry.note) + '</p>' : '') +
       '</article>';
   }
