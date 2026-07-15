@@ -9,19 +9,28 @@
     :root { color-scheme: light; --ink:#17211b; --cream:#f7f3ea; --sage:#a9b9a7; }
     * { box-sizing: border-box; }
     body { margin:0; min-height:100vh; display:grid; place-items:center; padding:2rem; color:var(--ink); background:radial-gradient(circle at 20% 20%,#fff 0,transparent 38%),linear-gradient(135deg,var(--cream),#dde6da); font-family:Georgia,"Times New Roman",serif; }
-    main { width:min(760px,100%); padding:clamp(2.25rem,7vw,5rem); border:1px solid rgba(23,33,27,.18); border-radius:28px; background:rgba(255,255,255,.6); box-shadow:0 24px 70px rgba(23,33,27,.12); backdrop-filter:blur(12px); }
+    main { width:min(980px,100%); display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.8fr); align-items:center; gap:clamp(2rem,6vw,5rem); padding:clamp(2rem,5vw,4.5rem); border:1px solid rgba(23,33,27,.18); border-radius:28px; background:rgba(255,255,255,.6); box-shadow:0 24px 70px rgba(23,33,27,.12); backdrop-filter:blur(12px); }
+    .intro { min-width:0; }
     .eyebrow { margin:0 0 1rem; font:700 .75rem/1.2 system-ui,sans-serif; letter-spacing:.18em; text-transform:uppercase; color:#526756; }
     h1 { margin:0; font-size:clamp(3.2rem,10vw,6.8rem); line-height:.88; letter-spacing:-.06em; }
     p { margin:2rem 0 0; max-width:36rem; font:400 clamp(1.05rem,2.2vw,1.3rem)/1.65 system-ui,sans-serif; }
     .rule { width:4rem; height:4px; margin-top:2.25rem; border-radius:99px; background:var(--sage); }
+    .portrait { width:100%; aspect-ratio:1; display:block; object-fit:cover; border-radius:22px; box-shadow:0 18px 45px rgba(23,33,27,.18); }
+    @media (max-width:720px) {
+      main { grid-template-columns:1fr; }
+      .portrait { grid-row:1; }
+    }
   </style>
 </head>
 <body>
   <main>
-    <p class="eyebrow">Official website</p>
-    <h1>Cetelia<br>Bullard</h1>
-    <div class="rule" aria-hidden="true"></div>
-    <p>A new website is being created. Please check back soon.</p>
+    <div class="intro">
+      <p class="eyebrow">Official website</p>
+      <h1>Cetelia<br>Bullard</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p>A new website is being created. Please check back soon.</p>
+    </div>
+    <img class="portrait" src="assets/cetelia-bullard.jpg" alt="Cetelia Bullard smiling in a kitchen">
   </main>
 </body>
 </html>
