@@ -44,6 +44,22 @@ window.ENCOURAGEMENT_CONTENT = {
       category: "Belonging",
       scriptureReference: "John 16:32, MSG",
       isPublished: true
+    },
+
+    // THANKS ENTRIES
+    {
+      id: "thanks-2026-07-13-dinner-before-work",
+      type: "thanks",
+      statement: "Thank you for preparing dinner for the family before you went to work.",
+      date: "2026-07-13",
+      isPublished: true
+    },
+    {
+      id: "thanks-2026-07-11-working-diligently",
+      type: "thanks",
+      statement: "Thank you for working so diligently.",
+      date: "2026-07-11",
+      isPublished: true
     }
   ]
 };
