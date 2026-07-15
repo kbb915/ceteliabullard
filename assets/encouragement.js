@@ -11,8 +11,6 @@
       kicker: "What I see in you",
       title: "What's True About Cetelia",
       introduction: "A growing collection of reminders about who you are, what is true about you, and what I see in you.",
-      imageSrc: "/assets/truth-peonies.jpg",
-      imageAlt: "Pink peonies blooming in a garden",
       emptyTitle: "No truths have been added yet.",
       emptyText: "New reminders will appear here when they are ready."
     },
@@ -20,8 +18,6 @@
       kicker: "With gratitude",
       title: "What I Am Grateful For",
       introduction: "A growing collection of things I notice, appreciate, and never want to take for granted.",
-      imageSrc: "/assets/thanks-peonies.jpg",
-      imageAlt: "Deep red peonies arranged in a vase",
       emptyTitle: "No gratitude entries have been added yet.",
       emptyText: "New reflections will appear here when they are ready."
     }
@@ -77,7 +73,6 @@
 
   function pageIntroduction(copy) {
     return '<header class="page-introduction">' +
-      (copy.imageSrc ? '<figure class="page-image-wrap"><img class="page-image" src="' + escapeHtml(copy.imageSrc) + '" alt="' + escapeHtml(copy.imageAlt) + '"></figure>' : '') +
       '<p class="page-kicker">' + escapeHtml(copy.kicker) + '</p>' +
       '<h1>' + escapeHtml(copy.title) + '</h1>' +
       '<p class="intro-copy">' + escapeHtml(copy.introduction) + '</p>' +

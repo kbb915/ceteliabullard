@@ -102,21 +102,6 @@ h1 {
   line-height: 1.65;
 }
 
-.page-image-wrap {
-  width: clamp(220px, 52vw, 360px);
-  max-width: 100%;
-  margin: 0 auto 2rem;
-}
-
-.page-image {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  display: block;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(38,48,39,.07);
-}
-
 .controls {
   display: grid;
   gap: .75rem;
