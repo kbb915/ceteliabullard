@@ -147,11 +147,23 @@ h1 {
 }
 
 .entry-card {
+  position: relative;
   padding: clamp(1.35rem, 5vw, 2.25rem);
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--paper);
   box-shadow: 0 12px 30px rgba(38,48,39,.045);
+}
+
+.entry-card::after {
+  position: absolute;
+  right: .85rem;
+  bottom: .65rem;
+  color: var(--accent);
+  content: "✿";
+  font-size: 1rem;
+  line-height: 1;
+  opacity: .55;
 }
 
 .sample-label {
