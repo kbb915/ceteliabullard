@@ -37,12 +37,13 @@ window.ENCOURAGEMENT_CONTENT = {
   entries: [
     // TRUTH ENTRIES
     {
-      id: "truth-2026-07-15-not-abandoned",
+      id: "truth-2026-07-15-fearfully-wonderfully-made",
       type: "truth",
-      statement: "I am not abandoned. The Father is with me.",
+      statement: "I am fearfully and wonderfully made.",
       date: "2026-07-15",
-      category: "Belonging",
-      scriptureReference: "John 16:32, MSG",
+      category: "Identity",
+      scriptureReference: "Psalm 139:14",
+      note: "God crafted me out of nothing into something wonderful.",
       isPublished: true
     },
 
