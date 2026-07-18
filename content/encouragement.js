@@ -37,6 +37,14 @@ window.ENCOURAGEMENT_CONTENT = {
   entries: [
     // TRUTH ENTRIES
     {
+      id: "truth-2026-07-17-purpose",
+      type: "truth",
+      statement: "I believe God Made me for a purpose. When I _____, I feel his pleasure.",
+      date: "2026-07-17",
+      scriptureReference: "Ephesians 2:10",
+      isPublished: true
+    },
+    {
       id: "truth-2026-07-15-fearfully-wonderfully-made",
       type: "truth",
       statement: "I am fearfully and wonderfully made.",
