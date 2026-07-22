@@ -39,7 +39,7 @@ window.ENCOURAGEMENT_CONTENT = {
     {
       id: "truth-2026-07-21-good-work",
       type: "truth",
-      statement: "He who began a good work in you will complete it until the day of Christ.",
+      statement: "He who began a good work in you will complete it until the day of Christ Jesus.",
       date: "2026-07-21",
       scriptureReference: "Philippians 1:6",
       isPublished: true
