@@ -37,6 +37,14 @@ window.ENCOURAGEMENT_CONTENT = {
   entries: [
     // TRUTH ENTRIES
     {
+      id: "truth-2026-07-21-good-work",
+      type: "truth",
+      statement: "He who began a good work in you will complete it until the day of Christ.",
+      date: "2026-07-21",
+      scriptureReference: "Philippians 1:6",
+      isPublished: true
+    },
+    {
       id: "truth-2026-07-17-purpose",
       type: "truth",
       statement: "I believe God Made me for a purpose. When I _____, I feel his pleasure.",
