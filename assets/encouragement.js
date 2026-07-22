@@ -8,7 +8,6 @@
   var type = root.dataset.entryType === "thanks" ? "thanks" : "truth";
   var pageCopy = {
     truth: {
-      kicker: "What I see in you",
       title: "What's True About\u00a0Cetelia",
       introduction: "A growing collection of reminders about who you are, what is true about you, and what I see in you.",
       emptyTitle: "No truths have been added yet.",
@@ -73,7 +72,7 @@
 
   function pageIntroduction(copy) {
     return '<header class="page-introduction">' +
-      '<p class="page-kicker">' + escapeHtml(copy.kicker) + '</p>' +
+      (copy.kicker ? '<p class="page-kicker">' + escapeHtml(copy.kicker) + '</p>' : '') +
       '<h1>' + escapeHtml(copy.title) + '</h1>' +
       '<p class="intro-copy">' + escapeHtml(copy.introduction) + '</p>' +
       '</header>';
